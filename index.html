@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TinCar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark text-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-secondary py-3">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold d-flex align-items-center" href="#">
+        <img src="img/logo-carro.png" alt="TinCar" width="60" class="me-2">
+        TinCar
+      </a>
+      <div class="ms-auto">
+        <a href="#servicios" class="text-light me-4 text-decoration-none">Servicios</a>
+        <a href="#contacto" class="text-light text-decoration-none">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="container py-5 d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="text-center text-md-start">
+      <h1 class="fw-bold text-warning display-4">Bienvenido a TinCar</h1>
+      <p class="lead">Con TinCar, guardamos tu tranquilidad en casa.</p>
+      <div class="mt-4">
+        <a href="#" class="btn btn-warning me-3 fw-semibold" data-bs-toggle="modal" data-bs-target="#registroModal"> Registrarse</a>
+        <a href="#" class="btn btn-outline-light fw-semibold" data-bs-toggle="modal" data-bs-target="#loginModal"> Inicia sesión</a>
+      </div>
+    </div>
+    <div class="mt-5 mt-md-0">
+      <img src="img/image.png" alt="TinCar Logo" class="img-fluid hero-logo">
+    </div>
+  </section>
+
+    <!-- Modal de Registro -->
+  <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-zoom">
+      <div class="modal-content bg-dark text-light border-2 border-warning rounded-4 position-relative overflow-hidden">
+
+        <!-- Pastilla "Regístrate" centrada -->
+        <div class="position-absolute top-0 start-50 translate-middle-x mt-3 z-3">
+          <div class="bg-warning text-dark fw-bold px-4 py-2 rounded-pill shadow-sm text-center">
+            Regístrate
+          </div>
+        </div>
+ 
+        <!-- Botón de cierre -->
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3 bg-warning rounded-circle p-2" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+
+        <!-- Contenido del modal -->
+        <div class="modal-body mt-5 px-5">
+          <form class="row g-3 justify-content-center">
+            <div class="col-md-4">
+              <input type="text" class="form-control bg-secondary text-light border-0" placeholder="Nombres">
+            </div>
+            <div class="col-md-4">
+              <input type="text" class="form-control bg-secondary text-light border-0" placeholder="Apellidos">
+            </div>
+            <div class="col-md-4">
+              <input type="text" class="form-control bg-secondary text-light border-0" placeholder="Tipo de documento">
+            </div>
+            <div class="col-md-4">
+              <input type="email" class="form-control bg-secondary text-light border-0" placeholder="Correo electrónico">
+            </div>
+            <div class="col-md-4">
+              <input type="text" class="form-control bg-secondary text-light border-0" placeholder="Teléfono">
+            </div>
+            <div class="col-md-4">
+              <input type="text" class="form-control bg-secondary text-light border-0" placeholder="Número documento">
+            </div>
+            <div class="col-md-4">
+              <input type="password" class="form-control bg-secondary text-light border-0" placeholder="Contraseña">
+            </div>
+            <div class="col-md-4">
+              <input type="password" class="form-control bg-secondary text-light border-0" placeholder="Confirmar contraseña">
+            </div>
+          </form>
+
+          <!-- Sección de términos -->
+          <div class="mt-4 text-center">
+            <div class="form-check d-inline-block text-start mx-2">
+              <input class="form-check-input" type="checkbox" id="terminos">
+              <label class="form-check-label" for="terminos">
+                Acepto <a href="#" class="text-warning text-decoration-underline">términos y condiciones</a>
+              </label>
+            </div>
+            <div class="form-check d-inline-block text-start mx-2">
+              <input class="form-check-input" type="checkbox" id="privacidad">
+              <label class="form-check-label" for="privacidad">
+                Acepto <a href="#" class="text-warning text-decoration-underline">política de privacidad</a>
+              </label>
+            </div>
+            <div class="form-check d-inline-block text-start mx-2">
+              <input class="form-check-input" type="checkbox" id="datos">
+              <label class="form-check-label" for="datos">
+                Acepto <a href="#" class="text-warning text-decoration-underline">tratamiento de datos</a>
+              </label>
+            </div>
+          </div>
+
+          <hr class="border-warning my-4">
+
+          <!-- Botones sociales -->
+          <div class="text-center">
+            <button type="button" class="btn btn-dark border-secondary text-light">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="20" class="me-2">
+                Continúa con Google
+            </button>
+            <button type="button" class="btn btn-dark border-secondary text-light">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" width="20" class="me-2">
+                Continúa con Apple
+            </button>
+          </div>
+        </div>
+              
+
+        <!-- Pie del modal -->
+        <div class="modal-footer justify-content-center" style="background-color: #FFEFCA;">
+          <button type="button" class="btn btn-outline-dark fw-bold" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-dark fw-bold">Aceptar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal de Iniciar Sesión -->
+  <div class="modal fade modal-zoom" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-zoom">
+      <div class="modal-content text-bg-dark border-warning border-3 rounded-4 overflow-hidden">
+
+
+        <!-- Pastilla "Inicia sesión" centrada -->
+        <div class="position-absolute top-0 start-50 translate-middle-x mt-3 z-3">
+          <div class="bg-warning text-dark fw-bold px-4 py-2 rounded-pill shadow-sm text-center">
+            Inicia sesión
+          </div>
+        </div>
+
+        <!-- Botón de cierre -->
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3 bg-warning rounded-circle p-2" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+
+        <!-- Contenido del modal -->
+        <div class="modal-body mt-5 px-5">
+          <form class="row g-3 justify-content-center">
+            <div class="col-md-4">
+              <input type="email" class="form-control bg-secondary text-light border-0" placeholder="e-mail" required>
+            </div>
+            <div class="col-md-4">
+              <input type="password" class="form-control bg-secondary text-light border-0" placeholder="Contraseña" required>
+            </div>
+
+            <hr class="border-secondary my-4">
+
+            <div class="d-grid gap-3">
+              <button type="button" class="btn btn-dark border-secondary text-light">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="20" class="me-2">
+                Continúa con Google
+              </button>
+              <button type="button" class="btn btn-dark border-secondary text-light">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" width="20" class="me-2">
+                Continúa con Apple
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Pie del modal -->
+        <div class="modal-footer justify-content-center" style="background-color: #FFEFCA;">
+          <button type="button" class="btn btn-outline-dark fw-bold" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-dark fw-bold">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Sobre TinCar -->
+  <section class="py-5 bg-warning-subtle text-dark">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Sobre TinCar</h2>
+      <p class="lead">
+        El propósito de TinCar es reducir la congestión vehicular en las grandes ciudades mediante estrategias innovadoras que mejoren la movilidad y promuevan un tránsito más fluido y sostenible.
+      </p>
+      <a href="#" class="btn btn-warning fw-semibold mt-3">Saber más</a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  
+</body>
+
+</html>

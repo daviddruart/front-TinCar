@@ -1,0 +1,69 @@
+:root {
+  --primary: #ffb300;
+  --dark: #1a1919;
+  --light-dark: #2c2c2c;
+  --cream: #ffefca;
+}
+
+body {
+  background-color: var(--dark);
+}
+
+.hero-logo {
+  width: 400px;
+  filter: drop-shadow(0 0 12px var(--primary));
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Efecto de zoom al abrir */
+.modal-zoom .modal-content {
+  transform: scale(0.7);
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+}
+.modal.show .modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Fondo del overlay */
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Personalización del botón de cierre */
+.btn-close.bg-warning {
+  filter: invert(0%);
+}
+
+/* ===== EFECTO ZOOM ===== */
+.modal-zoom .modal-content {
+  transform: scale(0.7);
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+}
+.modal.show .modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* ===== FONDO OSCURECIDO CON BLUR ===== */
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+/* ===== BOTÓN DE CIERRE ===== */
+.btn-close.bg-warning {
+  filter: invert(0%);
+}
+
+/* ===== FORMULARIO ===== */
+.form-control {
+  border-radius: 10px;
+  padding: 10px 14px;
+}
